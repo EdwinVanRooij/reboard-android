@@ -3,9 +3,9 @@ package edwinvanrooij.github.io.reboard_android;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
+import android.widget.Toast;
 
 public class MyInputMethodService extends InputMethodService
     implements KeyboardView.OnKeyboardActionListener {
@@ -23,20 +23,16 @@ public class MyInputMethodService extends InputMethodService
 
   @Override
   public void onKey(int primaryCode, int[] keyCodes) {
-
+    final int JOIN = -500;
     InputConnection ic = getCurrentInputConnection();
     if (ic == null) return;
     switch (primaryCode) {
       case Keyboard.KEYCODE_DELETE:
-        CharSequence selectedText = ic.getSelectedText(0);
-        if (TextUtils.isEmpty(selectedText)) {
-          // no selection, so delete previous character
-          ic.deleteSurroundingText(1, 0);
-        } else {
-          // delete the selection
-          ic.commitText("", 1);
-        }
         ic.deleteSurroundingText(1, 0);
+        ic.commitText("", 1);
+        break;
+      case JOIN:
+        Toast.makeText(this, "Joining!", Toast.LENGTH_SHORT).show();
         break;
       default:
         char code = (char) primaryCode;
