@@ -18,9 +18,9 @@
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="@string/name"
+        android:gravity="start"
+        android:hint="Hint"
+        android:minLines="3"
         />
 
     <Button
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onButtonClick"
-        android:text="@string/create_event"
+        android:text="@string/testbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

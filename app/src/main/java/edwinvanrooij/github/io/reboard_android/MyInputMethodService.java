@@ -1,5 +1,6 @@
 package edwinvanrooij.github.io.reboard_android;
 
+import android.app.AlertDialog;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
