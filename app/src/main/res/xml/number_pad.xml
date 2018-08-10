@@ -70,7 +70,7 @@
         android:keyLabel="␣"
         android:keyWidth="80%p"/>
     <Key
-        android:codes="127"
+        android:codes="10"
         android:keyEdgeFlags="right"
         android:keyLabel="↵"
         android:keyWidth="20%p"/>
